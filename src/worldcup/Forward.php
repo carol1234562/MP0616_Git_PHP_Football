@@ -2,6 +2,7 @@
 
 namespace WorldCup;
 
+use Ball;
 use Player;
 
 /**
@@ -28,7 +29,7 @@ class Forward extends Player {
         $this->killer = $killer;
     }
 
-    public function kickBall(Ball $ball) {
+    public function kickBall (Ball $kickBall) {
         $effects = [
             "with spin",
             "too high",
