@@ -2,6 +2,8 @@
 
 namespace WorldCup;
 
+use Player;
+
 /**
  * Class to define the forward
  */
