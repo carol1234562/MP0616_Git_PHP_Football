@@ -1,4 +1,7 @@
 <?php
+
+namespace WorldCup;
+
 class Ball{
     private string $material;
     private string $state; 

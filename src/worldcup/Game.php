@@ -3,9 +3,16 @@
 namespace WorldCup;
 
 use DateTime;
+use WorldCup\Field;
+use WorldCup\Ball;
+use WorldCup\Team;
+use WorldCup\Coach;
+use WorldCup\Goalkeeper;
+use WorldCup\Defender;
+use WorldCup\Midfielder;
+use WorldCup\Forward;
 
-$game = new Game();
-$game->main();
+require_once __DIR__ . '/vendor/autoload.php';
 
 /**
  * Class to define the game
@@ -49,8 +56,7 @@ class Game {
     }
 
     public function main() {
-        echo "starting application\n";
-        
+        echo "starting application<br>";
         
         $this->setField(new Field(100));
         $this->setDate(new DateTime());
@@ -100,23 +106,22 @@ class Game {
         $this->start();
     }
 
-
     public function start() {
-        echo "starting match actions...\n";
+        echo "starting match actions...<br>";
 
         for ($i = 0; $i < 10; $i++) {
-            echo "\n--- Action " . ($i + 1) . " ---\n";
+            echo "<br>--- Action " . ($i + 1) . " ---<br>";
 
             // select random team
             $teamIndex = array_rand($this->teams);
             $selectedTeam = $this->teams[$teamIndex];
-            echo "Team: " . $selectedTeam->getName() . "\n";
+            echo "Team: " . $selectedTeam->getName() . "<br>";
 
             // select random player
             $players = $selectedTeam->getPlayers();
             $playerIndex = array_rand($players);
             $selectedPlayer = $players[$playerIndex];
-            echo "Player type: " . (new \ReflectionClass($selectedPlayer))->getShortName() . "\n";
+            echo "Player type: " . (new \ReflectionClass($selectedPlayer))->getShortName() . "<br>";
 
             // common actions
             $selectedPlayer->run();
@@ -125,7 +130,7 @@ class Game {
             // specific actions
             if ($selectedPlayer instanceof Forward) {
                 $selectedPlayer->drible();
-                $selectedPlayer->kick($this->getBall());
+                $selectedPlayer->kickBall($this->getBall());
             } else if ($selectedPlayer instanceof Midfielder) {
                 $selectedPlayer->organize();
             } else if ($selectedPlayer instanceof Defender) {
@@ -135,5 +140,26 @@ class Game {
             }
         }
     }
+}
+
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    echo "<!DOCTYPE html>
+    <html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Match Results</title>
+    </head>
+    <body>
+        <h1>Simulación del Partido</h1>
+        <pre>";
     
+    $game = new Game();
+    $game->main();
+
+    echo "</pre>
+        <br>
+        <a href='index.php'>Volver al inicio</a>
+    </body>
+    </html>";
 }
