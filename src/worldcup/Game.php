@@ -12,8 +12,6 @@ use WorldCup\Defender;
 use WorldCup\Midfielder;
 use WorldCup\Forward;
 
-require_once __DIR__ . '/vendor/autoload.php';
-
 /**
  * Class to define the game
  */
