@@ -1,5 +1,8 @@
 <?php
 
+namespace WorldCup;
+
+
 use WorldCup\Person;
 
 class Player extends Person{
