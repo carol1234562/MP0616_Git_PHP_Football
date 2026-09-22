@@ -61,7 +61,6 @@ class Game {
         $this->setField(new Field(100));
         $this->setDate(new DateTime());
         $this->setBall(new Ball());
-
         // create players team A
         $listA = [];
         $listA[] = new Goalkeeper();
