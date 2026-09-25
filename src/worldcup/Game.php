@@ -12,6 +12,17 @@ use WorldCup\Defender;
 use WorldCup\Midfielder;
 use WorldCup\Forward;
 
+require_once __DIR__ . '/Person.php';
+require_once __DIR__ . '/Player.php';
+require_once __DIR__ . '/Field.php';
+require_once __DIR__ . '/Ball.php';
+require_once __DIR__ . '/Coach.php';
+require_once __DIR__ . '/Team.php';
+require_once __DIR__ . '/GoalKeeper.php';
+require_once __DIR__ . '/Defender.php';
+require_once __DIR__ . '/Midfielder.php';
+require_once __DIR__ . '/Forward.php';
+
 /**
  * Class to define the game
  */

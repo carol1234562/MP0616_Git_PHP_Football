@@ -34,14 +34,14 @@ class Team {
     }
 
     /**
-     * Set the coach
+     * Get the coach
      */
     public function getCoach() {
         return $this->coach;
     }
 
     /**
-     * Get the coach
+     * Set the coach
      */
     public function setCoach($coach) {
         $this->coach = $coach;

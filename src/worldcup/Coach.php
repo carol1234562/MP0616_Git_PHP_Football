@@ -2,6 +2,8 @@
 
 namespace WorldCup;
 
+use WorldCup\Person;
+
 class Coach extends Person {
     //privated corrected
     private $style; 
