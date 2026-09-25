@@ -33,9 +33,9 @@ class Forward extends Player {
         ];
 
         $effects = [
-"with incredible hyper-speed power",
-"straight into the top corner like a rocket",
-"with unstoppable force"
+    "curled delicately into the bottom corner",
+    "placed softly past the goalkeeper",
+    "with extreme tactical precision"
 ];
     }
 }
