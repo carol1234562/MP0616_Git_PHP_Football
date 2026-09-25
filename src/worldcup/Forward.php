@@ -29,7 +29,7 @@ class Forward extends Player {
         $this->killer = $killer;
     }
 
-    public function kickBall (Ball $kickBall) {
+    public function kick(Ball $ball) {
         $effects = [
             "with spin",
             "too high",
