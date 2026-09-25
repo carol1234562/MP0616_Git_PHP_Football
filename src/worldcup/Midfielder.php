@@ -2,6 +2,8 @@
 
 namespace WorldCup;
 
+use WorldCup\Player;
+
 /**
  * Class to define the midfielder
  */

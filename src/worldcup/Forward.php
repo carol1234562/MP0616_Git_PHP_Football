@@ -2,8 +2,8 @@
 
 namespace WorldCup;
 
-use Ball;
-use Player;
+use WorldCup\Ball;
+use WorldCup\Player;
 
 /**
  * Class to define the forward

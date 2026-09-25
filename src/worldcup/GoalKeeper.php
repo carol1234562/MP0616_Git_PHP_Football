@@ -2,6 +2,9 @@
 
 namespace WorldCup;
 
+use WorldCup\Ball;
+use WorldCup\Player;
+
 /**
  * Class to define the goalkeeper
  */
