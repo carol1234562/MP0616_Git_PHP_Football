@@ -127,7 +127,7 @@ class Game {
             // specific actions
             if ($selectedPlayer instanceof Forward) {
                 $selectedPlayer->drible();
-                $selectedPlayer->kickBall($this->getBall());
+                $selectedPlayer->kick($this->getBall());
             } else if ($selectedPlayer instanceof Midfielder) {
                 $selectedPlayer->organize();
             } else if ($selectedPlayer instanceof Defender) {
