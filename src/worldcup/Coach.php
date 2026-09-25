@@ -3,7 +3,8 @@
 namespace WorldCup;
 
 class Coach extends Person {
-    privated $style; 
+    //privated corrected
+    private $style; 
 
     public function train() {
         echo "train\n";

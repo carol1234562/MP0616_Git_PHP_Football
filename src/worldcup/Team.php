@@ -18,9 +18,6 @@ class Team {
         echo "playing\n";
     }
 
-    public function attack() {
-        echo "attacking\n";
-    }
 
     /**
      * Get the name
