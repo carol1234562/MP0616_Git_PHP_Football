@@ -10,6 +10,8 @@ class Team {
     public $coach;
     public $players; // array of Player objects
 
+
+// Constructors and Getters-Setters
     public function __construct($name) {
         $this->name = $name;
     }
