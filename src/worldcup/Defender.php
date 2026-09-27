@@ -1,9 +1,11 @@
 <?php
 
+namespace WorldCup;
+
 use WorldCup\Ball;
 use WorldCup\Player;
 
-class Defender {
+class Defender extends Player {
     public $mark;
 
     public function steal(Ball $ball) {
